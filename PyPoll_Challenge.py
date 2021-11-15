@@ -73,8 +73,8 @@ with open(file_to_load) as election_data:
             # 4c: Begin tracking the county's vote count.
             county_votes[county] = 0
 
-        # 5: Add a vote to that county's vote count.
-            county_votes[county] += 1
+    # 5: Add a vote to that county's vote count.
+        county_votes[county] += 1
 
 
 # Save the results to our text file.
@@ -95,7 +95,8 @@ with open(file_to_save, "w") as txt_file:
     # 
     for county in county_votes:
         # 6b: Retrieve the county vote count.
-        counties_vote = county_votes.get(county)
+        counties_vote = county_votes.get(county) 
+        
         # 6c: Calculate the percentage of votes for the county.
         counties_vote_percentage = float(counties_vote) / float(total_votes) * 100
 
